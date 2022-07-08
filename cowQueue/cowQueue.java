@@ -1,4 +1,4 @@
-package cowQueue;
+package CowQueue;
 import java.io.*;
 import java.util.*;
 

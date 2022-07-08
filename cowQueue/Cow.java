@@ -1,4 +1,4 @@
-package cowQueue;
+package CowQueue;
 
 public class Cow implements Comparable<Cow>{
   public int duration;
