@@ -25,18 +25,12 @@ public class MaximumDistance {
         xCors[i] = Integer.parseInt(stringXCors[i]);
         yCors[i] = Integer.parseInt(stringYCors[i]);
       }
-      System.out.println(Arrays.toString(xCors));
       scanner.close();
       int max = 0;
-      System.out.println("Successfully read in files");
       for(int i = 0; i < xCors.length; i++) {
-        for(int j = 0; j < xCors.length; j++) {
-          if(i != j) {
-            int currDistance = distance(xCors[i], xCors[j], yCors[i], yCors[j]);
-            if( currDistance > max) {
-              max = currDistance;
-            }
-          }
+        for(int j = i + 1; j < xCors.length; j++) {
+          int currDistance = distance(xCors[i], xCors[j], yCors[i], yCors[j]);
+          max = Math.max(max, currDistance);
         }
       }
       return max;
